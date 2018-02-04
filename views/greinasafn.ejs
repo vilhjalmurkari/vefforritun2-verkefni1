@@ -1,0 +1,28 @@
+<% include header.ejs %>
+
+
+  <div class="article-list">
+
+    <% grein.forEach((grein) => { %>
+
+      <a class="article-col" href= <%= grein.attributes.slug %>>
+         <% if( grein.attributes.image !== undefined) { %>
+        <div class="article-img">
+          <img class="image" src= <%= grein.attributes.image %> alt="image">
+        </div>
+        <% } else { %>
+        <div class="article-imgNotFound"></div>
+        <% } %>
+        <div class="article-content">
+          <p class="article-title"> <%= grein.attributes.title %> </p>
+          <p class="article-date"> <%= (new Date(grein.attributes.date)).getDate()  + "." + ((new Date(grein.attributes.date)).getMonth()+1) + "." + (new Date(grein.attributes.date)).getFullYear()%> </p>
+        </div>
+      </a>
+    <% }) %>
+
+
+    </div>
+
+  </div>
+
+<% include footer.ejs %>
