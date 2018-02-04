@@ -1,0 +1,20 @@
+{
+  "name": "v1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "eslint": "eslint *.js **/*.js",
+    "start": "node app.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "front-matter": "^2.3.0",
+    "markdown": "^0.5.0"
+  }
+}
